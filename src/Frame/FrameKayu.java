@@ -20,7 +20,7 @@ public class FrameKayu extends javax.swing.JFrame {
      */
 
     
-    public FrameKayu() {
+    public FrameKayu(){
         initComponents();
         this.setLocationRelativeTo(null);
         dataKayu = new Rekap();
@@ -166,11 +166,11 @@ public class FrameKayu extends javax.swing.JFrame {
                         .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 20, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,9 +227,9 @@ public class FrameKayu extends javax.swing.JFrame {
            dataKayu.inputDataJumlahKayu(Integer.parseInt(txtJumlah.getText()));
            dataKayu.inputDataKeterangan( txtKeterangan.getText());
            
-//           dataKayu.setDUjung(Double.parseDouble(txtDUjung.getText()));
-//           dataKayu.setDPangkal(Double.parseDouble(txtDPangkal.getText()));
-//           dataKayu.setPanjang(Double.parseDouble(txtPanjang.getText()));
+           dataKayu.setDUjung(Double.parseDouble(txtDUjung.getText()));
+           dataKayu.setDPangkal(Double.parseDouble(txtDPangkal.getText()));
+           dataKayu.setPanjang(Double.parseDouble(txtPanjang.getText()));
            double dr = dataKayu.hitungDiameterRata();
            double vol = dataKayu.hitungVolume();
            
@@ -253,9 +253,9 @@ public class FrameKayu extends javax.swing.JFrame {
     }//GEN-LAST:event_tblKayuMouseClicked
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
-//        dataKayu.setDUjung(Double.parseDouble(txtDUjung.getText()));
-//        dataKayu.setDPangkal(Double.parseDouble(txtDPangkal.getText()));
-//        dataKayu.setPanjang(Double.parseDouble(txtPanjang.getText()));
+        dataKayu.setDUjung(Double.parseDouble(txtDUjung.getText()));
+        dataKayu.setDPangkal(Double.parseDouble(txtDPangkal.getText()));
+        dataKayu.setPanjang(Double.parseDouble(txtPanjang.getText()));
         double dr = dataKayu.hitungDiameterRata();
         double vol = dataKayu.hitungVolume();
 
