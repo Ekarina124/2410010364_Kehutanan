@@ -106,7 +106,6 @@ public class Kayu {
     
     public void ubahDataKayu(String nama, int no, double dUjung, double dPangkal, double panjang) {
         int i = getIndexData(nama);
-        if (i < 0) return;
         this.listDataNama().set(i, nama);
         this.listDataNoKayu().set(i, no);
         this.listDataDiameterUjung().set(i, dUjung);

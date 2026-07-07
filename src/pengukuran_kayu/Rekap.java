@@ -81,7 +81,7 @@ public class Rekap extends Kayu {
     }
 
     public double volumeTotal() {
-        return hitungDiameterRata() + hitungVolume();
+        return getVolume() * getJumlahKayu();
     }
 
     // ===================== SEARCH DATA REKAP =====================
@@ -106,5 +106,29 @@ public class Rekap extends Kayu {
                      + "\nKeterangan       : " + ket;
 
         JOptionPane.showMessageDialog(null, pesan);
+    }
+    
+    public void hapusDataRekap(String nama){
+        int i = getIndexData(nama);
+
+        if(i < 0) return;
+
+        this.dataJumlahKayu.remove(i);
+        this.dataKeterangan.remove(i);
+        this.dataDiameterRata.remove(i);
+        this.dataVolume.remove(i);
+    }
+    
+    public void ubahDataRekap(int jumlah, String ket, double dRata, double volume, String nama){
+        int i = getIndexData(nama);
+
+        if(i < 0) return;
+
+        this.dataJumlahKayu.set(i, jumlah);
+        this.dataKeterangan.set(i, ket);
+        this.dataDiameterRata.set(i, dRata);
+        this.dataVolume.set(i, volume);
+
+//        JOptionPane.showMessageDialog(null, "Data Rekap Berhasil Diubah!");
     }
 }
